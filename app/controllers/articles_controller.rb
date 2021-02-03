@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
       redirect_to article_path(@article) # can also be writte
       #as redirect_to @article
       #i wrote if for my understanding that after saving it will be going to the show page
-      
+
    else
     render 'new'
    end
@@ -38,6 +38,12 @@ class ArticlesController < ApplicationController
     else
       render edit
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to articles_path#verb for index listing is articles and we add_path 
   end
 
 end 
