@@ -1,18 +1,24 @@
 <h1 class= "text-center mt-4">Listing all Articles</h1>
-<% @articles.each do |article| %>
-  <div class="card text-center">
-    <div class="card-header">
-      Featured
-    </div>
-    <div class="card-body">
-      <h5 class="card-title"><%= article.title %></h5>
-      <p class="card-text"><%= article.description %></p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    <div class="card-footer text-muted">
-      2 days ago
-    </div>
-  </div>
-<% end %>
+<div class="container">
+  <% @articles.each do |article| %>
+    <div class="row justify-content-md-center">
+      <div class="col-8 mt-4">
+        <div class="card text-center">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= article.title %></h5>
+            <p class="card-text"><%= article.description %></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer text-muted">
+            2 days ago
+          </div>
+        </div>
+      </div>  
+    </div>    
+  <% end %>
+</div>
 
 
