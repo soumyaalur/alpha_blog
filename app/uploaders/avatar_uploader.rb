@@ -27,13 +27,13 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
-  def default_url
-    if model.class == User
-      "/images/profile.png"
-    else
-        "/images/#{model.class.to_s.downcase}.jpeg"
-    end
-  end
+  #def default_url
+  #  if model.class == User
+  #    "/images/profile.png"
+  #  else
+  #      "/images/#{model.class.to_s.downcase}.jpeg"
+  #  end
+ # end
    #def default_url(*args)
     #  'profile.png' 
   #   # For Rails 3.1+ asset pipeline compatibility:
