@@ -1,17 +1,19 @@
 <h1 class= "text-center mt-4">
-<div class="flickr_pagination">
-  <%= will_paginate @articles, :container => false %>
-</div>
+
 <%= @user.username %>'s profile</h1>
-<div class="text-center mt-4"">
+
+<div class="text-center mt-4">
   <%= avatar_for @user, size: 120 %>
   <div class="text-center mt-4">
     <%= link_to "Edit your profile", edit_user_path(@user), class: "btn btn-outline-info" %>
   </div>
 </div>
+<div class="flickr_pagination mt-4">
+  <%= will_paginate @articles, :container => false %>
+</div>
 <h3 class= "text-center mt-4">Articles</h3>
 <%= render 'articles/article' %>
-<div class="flickr_pagination">
+<div class="flickr_pagination mb-4">
   <%= will_paginate @articles, :container => false %>
 </div>
 
