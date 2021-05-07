@@ -3,7 +3,7 @@ module ApplicationHelper
     size = options[:size]
     style = options[:style]
     if user.avatar?
-      if size <= 80
+      if size <= 60
         image_tag user.avatar.url(:thumb), width: size, height: size, alt: user.username, class: 'avatar-image', style: style
       else
         image_tag user.avatar.url, width: size, height: size, alt: user.username, class: 'avatar-image', style: style

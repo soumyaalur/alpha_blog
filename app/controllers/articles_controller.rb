@@ -24,7 +24,6 @@ class ArticlesController < ApplicationController
       redirect_to article_path(@article) # can also be writte
       #as redirect_to @article
       #i wrote if for my understanding that after saving it will be going to the show page
-
    else
     render 'new'
    end
