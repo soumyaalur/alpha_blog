@@ -12,4 +12,12 @@ module ApplicationHelper
       image_tag 'profile.png', width: size, height: size, alt: 'avatar image', class: 'avatar-image', style: style
     end
   end
+
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+
+  def logged_in?
+    !!current_user
+  end
 end
